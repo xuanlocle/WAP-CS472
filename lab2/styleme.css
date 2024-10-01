@@ -1,0 +1,53 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: cornsilk;
+}
+
+body {
+    margin: 80px 20px;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+h1 {
+    color: #ffa116;
+    background-color: #ffa1161f;
+}
+
+h2 {
+    color: #0013e9;
+}
+
+ol>li {
+    font-size: 14pt;
+}
+
+ul>li {
+    font-size: 12pt;
+}
+
+p>a {
+    color: green;
+}
+
+li>a:visited {
+    color: red;
+}
+
+.mood {
+    display: inline;
+    font-size: 14pt;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.facts>li::first-letter {
+
+    font-size: 2em;
+}
+
+.badges {
+    display: inline;
+}
