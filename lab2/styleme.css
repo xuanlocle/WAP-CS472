@@ -33,6 +33,14 @@ p>a {
     color: green;
 }
 
+li>a {
+    text-decoration: none;
+}
+
+li>a:hover {
+    text-decoration: underline;
+}
+
 li>a:visited {
     color: red;
 }
@@ -45,9 +53,20 @@ li>a:visited {
 
 .facts>li::first-letter {
 
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .badges {
     display: inline;
+}
+
+div.form {
+    border: solid grey;
+    text-align: center;
+    align-content: center;
+}
+
+.formRow {
+    height: 60px;
+    margin: 32px;
 }
