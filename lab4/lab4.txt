@@ -1,0 +1,60 @@
+Code 1:
+
+Console:
+undefined
+8
+8
+9
+10
+undefined
+
+1. Global EC creation:
+Outer: null, LE: [{ a: undefined, b: undefined, c: undefined }], TDZ{ x }
+2.Global EC execution:
+Outer: null, LE: [{ a: 5, b: 10, c: fn(), x: undefined }], TDZ{ }
+3.C FEC creation:
+Outer: global, LE: [{ a: 8, b: 9, c: 10, f: undefined, x: undefined}], TDZ{ }
+4.C FEC execution:
+Outer: global , LE: [{ a: 8, b: 9, c: 10, f: fn(), x: 10 }], TDZ{ }
+5.F FEC creation:
+Outer: C, LE: [{a: 8, b: 9, c: 10, x: undefined }], TDZ{ }
+6.F FEC execution:
+Outer: C, LE: [{a: 8, b: 10, c: 10, x: 5 }], TDZ { }
+
+
+
+Code 2:
+
+Console:
+81
+25
+
+1. Global EC creation:
+Outer: null, LE [{ x: undefined, myFunction: fn() }], TDZ{}
+2. Global EC execution:
+Outer: null, LE [{ x: 9, myFunction: fn()}], TDZ{}
+3. myFunction FEC creation: 
+Outer: global, LE [{}], TDZ{}
+4. Global EC execution
+Outer: null, LE [{ x: 5}], TDZ{}
+5. myFunction FEC execution:
+Outer: global, LE [{}], TDZ{}
+
+
+Code 3:
+
+Console:
+10
+
+1. Global EC creation:
+Outer: null, LE [{ foo: undefined, bar: fn() }], TDZ{}
+2. Global EC execution:
+Outer: null, LE [{ foo: 1, bar: fn()}], TDZ{}
+3. bar FEC creation: 
+Outer: global, LE [
+    {foo: undefined}, 
+    {}], TDZ{}
+4. bar FEC execution
+Outer: global, LE [
+    {foo: 10},
+    {}], TDZ{}
