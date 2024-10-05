@@ -1,0 +1,25 @@
+Console:
+
+Greetings, John
+hi undefined
+hello Smith
+
+
+
+
+1. Global EC creation:
+ LE:{ show: fn(), outer:null}, TDZ{ str, user }, this: window
+2.Global EC execution:
+ LE:{ show: fn(), str: 'Greetings, ', user: obj, outer:null}, TDZ{...}, this: window
+3.user:display FEC creation:
+ LE:{ outer: global}, TDZ{ }, this: user
+4.user:display FEC execution:
+ LE:{ outer: global}, TDZ{ }, this: user
+5.show FEC creation:
+ LE:{ msg: "hi", outer: global}, TDZ{ }, this: window
+6.show FEC execution:
+ LE:{ msg: "hi", outer: global}, TDZ{ }, this: window
+7.show FEC creation:
+ LE:{ msg: "hello", outer: global}, TDZ{ }, this: user
+8.show FEC execution:
+ LE:{ msg: "hello", outer: global}, TDZ{ }, this: user
