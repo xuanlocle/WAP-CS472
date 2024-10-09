@@ -1,0 +1,24 @@
+//Console (mode module)
+promise 1
+nextTick 1
+setImmediate 1
+setTimeout 1
+Hello
+
+Explain: In module mode, the import fs from file return a promise -> it's come to promise microtasks, 
+That's why 'promise 1' be printed first before print 'nextTick'.
+Then, the IO phase was complete, move to next queue in event loop: check phase, that's why 'setImmediate' be printed. 
+After check phase, it move to Timer phase and print the 'setTimeout'. 
+Then the readFile invoke the IO phase, then print the 'input.txt' file's content.
+
+
+//Console (mode commonjs)
+nextTick 1
+promise 1
+setTimeout 1
+setImmediate 1
+Hello
+
+Explain: In commonjs, the require function is used to import fs. So, the nextTick is printed first, then promise (microtasks). 
+Then evenloop will move to timer phase and print setTimeout, then move to check phase to print 'setImmediate'. 
+After read file, move to IO phase and print file's content.
