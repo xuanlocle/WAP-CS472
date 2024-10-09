@@ -17,13 +17,19 @@ Explain the difference between process.nextTick(f) and setImmediate(f)?
 
 2. setTimeout
 - schedules a callback to run after a specific time, the functions are registered in the timers phase of the event loop.
+- setTimeout() schedules a script to be run after a minimum threshold in ms has elapsed.
 
 setImmediate
 - schedules a callback to run at check phase of the event loop after IO events callbacks.
+- setImmediate() is designed to execute a script once the current poll phase completes.
+
+The main advantage to using setImmediate() over setTimeout() is setImmediate() will always be executed before any timers if scheduled within an I/O cycle, independently of how many timers are present.
 
 For example:
 setTimeout(() => { console.log('timeout'); }, 0);
 setImmediate(() => { console.log('immediate'); });
+==> is non-deterministic, as it is bound by the performance of the process:
+However, if you move the two calls within an I/O cycle, the immediate callback is always executed first:
 ==> the 'immediate' will be invoke first to print the console, then 'timeout'
 
 3. 
