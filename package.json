@@ -5,7 +5,9 @@
   "description": "A repository for CS472 class",
   "main": "lab9/server.js",
   "scripts": {
-    "start": "node lab9/server.js",
+    "lab9": "node lab9/server.js",
+    "lab10q1": "node lab10/question1/server.js",
+    "lab10q2": "node lab10/question2/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +23,8 @@
   "homepage": "https://github.com/xuanlocle/WAP-CS472#readme",
   "devDependencies": {
     "@types/node": "^22.7.5"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
   }
 }
