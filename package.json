@@ -8,6 +8,7 @@
     "lab9": "node lab9/server.js",
     "lab10q1": "node lab10/question1/server.js",
     "lab10q2": "node lab10/question2/server.js",
+    "lab11": "node lab11/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
