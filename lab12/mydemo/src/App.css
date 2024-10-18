@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #EA5421;
+  display: flex;
+  color: white;
+  padding: 0px 20px;
+}
+
+
+.footer {
+  display: absolute;
+  background-color: #F5F5F1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0px 20px 0px 20px;
+  width: 100%;
+
+}
+
+.footer h4:first-of-type {
+  float: left;
+}
+
+.footer h4:last-of-type {
+  float: right;
+  padding: 0px 40px;
+}
+
+.body-padding {
+  margin: 0px 100px 100px 100px;
+}
+
+.top-padding {
+  margin-top: 60px;
+}
+
+.formRow {
+  padding: 10px 4px;
+}
+
+.formRow input {
+  width: 100%;
+  margin-top: 5px;
+  height: 32px;
+}
+
+.right {
+  float: right;
+}
+
+.primary {
+  background-color: #EA5421;
+  color: white;
+}
+
+.secondary {
+  background-color: #AEA79F;
+  color: white;
+}
+
+.btn {
+  padding: 10px 40px;
+  margin: 0px 4px;
+  border-radius: 4px;
+  border: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+td,
+th {
+  padding: 10px;
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}

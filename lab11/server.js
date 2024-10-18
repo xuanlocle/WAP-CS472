@@ -1,8 +1,9 @@
 import express from 'express';
 import studentRouter from './routers/studentRouter.js';
+import cors from 'cors';
 
 const app = express();
-
+app.use(cors());
 app.use('/api/v1/students', studentRouter);
 
 //this middleware only invoke when next(Error) be call
